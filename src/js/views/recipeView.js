@@ -31,15 +31,6 @@ class RecipeView extends View {
     });
   }
 
-  addHandlerUpdateServings(handler) {
-    this._parentElement.addEventListener("click", function (e) {
-      const btn = e.target.closest(".btn--update-servings");
-      if (!btn) return;
-      const { updateTo } = btn.dataset;
-      if (+updateTo > 0) handler(+updateTo);
-    });
-  }
-
   addHandlerAddBookmark(handler) {
     this._parentElement.addEventListener("click", function (e) {
       const btn = e.target.closest(".btn--bookmark");
